@@ -18,12 +18,18 @@ cursor  =   mydb.cursor()
 #resultado = cursor.fetchall()
 
 #Insertar datos
-sql =   'insert into Usuario(nombre, email) values(%s, %s)'
-values =    ('dalstrom', 'dalstrom@dfcs.dc')
+#sql =   'insert into Usuario(nombre, email) values(%s, %s)'
+#values =    ('dalstrom', 'dalstrom@dfcs.dc')
+
+
+#Actualizar Datos
+sql = 'update Usuario set email = %s where id = %s'
+values = ('dalstrom@dfcs.com',1)
+
 
 cursor.execute(sql, values)
 mydb.commit()
 
 
 #print(resultado)
-print(cursor.rowcount)
+#print(cursor.rowcount)
