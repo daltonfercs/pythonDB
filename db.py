@@ -23,8 +23,13 @@ cursor  =   mydb.cursor()
 
 
 #Actualizar Datos
-sql = 'update Usuario set email = %s where id = %s'
-values = ('dalstrom@dfcs.com',1)
+#sql = 'update Usuario set email = %s where id = %s'
+#values = ('dalstrom@dfcs.com',1)
+
+
+#eliminar datos
+sql = 'delete from Usuario where id = %s'
+values = (4, )  #nota: si es solo un valor tiene q sir con coma sino sale error
 
 
 cursor.execute(sql, values)
